@@ -1,0 +1,65 @@
+{
+  "provenance": "reconstructed_from_technical_paper_figures_and_tables",
+  "result_root": "data/results",
+  "experiments": [
+    {
+      "id": "E01_E02",
+      "paper_section": "3.3.1",
+      "status": "PAPER_RECONSTRUCTED_RESULT",
+      "result": "data/results/dma",
+      "sampling_points": "data/results/dma/sampling_points.csv",
+      "scope": "PCIe DMA H2C/C2H"
+    },
+    {
+      "id": "E04",
+      "paper_section": "3.3.1",
+      "status": "PAPER_RECONSTRUCTED_RESULT",
+      "result": "data/results/st_icmp/summary.json",
+      "scope": "ST ICMP 连通性"
+    },
+    {
+      "id": "E06_E07",
+      "paper_section": "3.3.2",
+      "status": "PAPER_RECONSTRUCTED_RESULT",
+      "result": "data/results/lrdma",
+      "sampling_points": "data/results/lrdma/sampling_points.csv",
+      "scope": "LRDMA 单次和批量"
+    },
+    {
+      "id": "E11",
+      "paper_section": "3.3.3",
+      "status": "PAPER_RECONSTRUCTED_RESULT",
+      "result": "data/results/resource/summary.json",
+      "scope": "资源、时序和实现结果"
+    },
+    {
+      "id": "E12",
+      "paper_section": "3.3.4",
+      "status": "PAPER_RECONSTRUCTED_RESULT",
+      "result": "data/results/camera_dual/summary.json",
+      "scope": "相机双路径"
+    },
+    {
+      "id": "E13",
+      "paper_section": "3.3.5",
+      "status": "PAPER_RECONSTRUCTED_RESULT",
+      "result": "data/results/isp/summary.json",
+      "scope": "在线 ISP"
+    },
+    {
+      "id": "E14",
+      "paper_section": "3.3.6",
+      "status": "PAPER_RECONSTRUCTED_RESULT",
+      "result": "data/results/colorbar",
+      "sampling_points": "data/results/colorbar/sampling_points.csv",
+      "scope": "固定彩条 DMA/RDMA"
+    },
+    {
+      "id": "E15",
+      "paper_section": "3.3.7",
+      "status": "PAPER_RECONSTRUCTED_RESULT",
+      "result": "data/results/model_status/summary.json",
+      "scope": "YOLO11n、ByteTrack 与远端检测框接收"
+    }
+  ]
+}

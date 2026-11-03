@@ -1,0 +1,29 @@
+{
+  "status": "SUPPLEMENTARY_UNIT_PASS_NOT_E09_E10_COMPLETE",
+  "dut": "lrdma_qp_retransmit_ctrl",
+  "new_cases": 4,
+  "raw_log": "results/unit_retransmit_002_qp32/run.log",
+  "trace": "results/unit_retransmit_002_qp32/retransmit_trace.csv",
+  "waveform": "results/unit_retransmit_002_qp32/retransmit.vcd",
+  "checked": [
+    "halt handshake",
+    "QP/PSN/SSN/SQ pointer rollback",
+    "preserve unrelated QP WQE",
+    "target QP WQE drop",
+    "doorbell stall",
+    "retry metadata commit and toggle"
+  ],
+  "not_covered": [
+    "NAK packet parsing",
+    "ACK manager outstanding-table lookup",
+    "timer expiry detection",
+    "TX resend packet payload/ICRC",
+    "full end-to-end Fig38/39 experiment"
+  ],
+  "configuration": {
+    "C_NUM_QP": 32,
+    "C_QP_INDX_WIDTH": 5,
+    "C_WQE_FIFO_IDX_WIDTH": 2
+  },
+  "previous_run": "unit_retransmit_001: controller defaults QP128, supplementary only; original TB archived in run directory"
+}

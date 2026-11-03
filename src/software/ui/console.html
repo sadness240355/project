@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>智能视觉与 RDMA 工作站</title><link rel="stylesheet" href="/console.css"></head>
+<body>
+<header class="top"><div class="brand"><span class="logo">E</span><div><span id="brandName">智能视觉与 RDMA 工作站</span><small>图像采集与高速传输</small></div></div><nav><a class="selected" href="/">实时工作区</a><a href="/dual">双端监看 ↗</a><a id="peerLink" target="_blank" rel="noopener">对端工作区 ↗</a></nav><div class="connection"><i id="lamp"></i><span id="connection">连接设备服务</span><span id="side" class="badge">—</span></div></header>
+<div class="heading"><div><span class="eyebrow">CAMERA LINK / RoCE v2</span><h1>看清每一帧，掌握每一次传输。</h1></div><span class="session" id="clock"></span></div>
+<section class="metrics">
+ <article><span>原始图像尺寸</span><strong id="resolution">— × —</strong><small>RGB888 · 保留完整分辨率</small></article>
+ <article><span>摄像头采集</span><strong><b id="captureFps">—</b><em> fps</em></strong><small>采集进程实际统计</small></article>
+ <article><span>RDMA 完整接收</span><strong><b id="receiveFps">—</b><em> fps</em></strong><small id="verified">— 帧已校验</small></article>
+ <article><span>发送取帧跳过</span><strong><b id="loss">—</b><em> 帧</em></strong><small>FPGA DDR → ERNIC 提交前</small></article>
+ <article><span>有效图像吞吐</span><strong><b id="bandwidth">—</b><em> Gbit/s</em></strong><small>应用累计平均 · 不含协议开销</small></article>
+ <article><span>完整性校验错误</span><strong id="errors">—</strong><small>接收端逐帧 CRC32</small></article>
+</section>
+<main class="workspace">
+<aside class="panel settings">
+ <div class="panel-title">设备与采集 <span class="muted">01</span></div>
+ <div class="readonly">采集卡 <span id="captureCard">正在读取…</span></div>
+ <div class="readonly">相机型号 <span id="cameraModel">正在读取…</span></div>
+ <div class="readonly">采集通道 <span id="cameraChannel">Camera Link · 通道 0</span></div>
+ <p class="hint">当前链路已接入 1 张卡 / 1 个相机通道。</p>
+ <div class="divider"></div><h3>采集参数</h3>
+ <label>图像尺寸<select id="size"><option>1920×1080</option><option>2400×2048</option><option>1280×720</option><option>640×480</option></select></label><label>数据流<select id="format"><option value="rgb">FPGA ISP · RGB888</option><option value="bayer">摄像头原始 · BayerRG8</option></select></label>
+ <label>目标帧率<select id="fps"><option>120</option><option>140</option><option>60</option><option>30</option></select></label>
+ <label>主机直写缓冲数<select id="buffers"><option>16</option><option>8</option><option>4</option><option>2</option><option>32</option></select></label>
+ <p class="hint">运行中修改分辨率会安全重配；启动或安全保持阶段可预选。分辨率不随显示缩放改变。</p>
+ <button id="start" class="primary wide" onclick="pipeline('start')">▶ 开始连续采集</button>
+ <div class="two"><button id="stop" class="danger" onclick="pipeline('stop')">■ 安全停止</button><button onclick="freeze(true)">⊕ 单帧抓取</button></div>
+ <p class="hint">单帧抓取保存当前完整帧；不改变相机触发模式。</p>
+ <div class="divider"></div><h3>网络链路 <span id="linkState" class="tag">—</span></h3>
+ <dl><dt>本端 RDMA IP</dt><dd id="localIp">—</dd><dt>对端 RDMA IP</dt><dd id="peerIp">—</dd><dt>本端管理 IP</dt><dd id="managementIp">—</dd><dt>网络接口</dt><dd id="interface">—</dd><dt>以太网 / RoCE MTU</dt><dd id="mtu">— / 4096</dd></dl>
+</aside>
+<section class="center">
+ <div class="panel image-panel">
+  <div class="image-toolbar"><div><span id="liveLabel" class="live-label">● LIVE</span><b id="imageTitle">实时图像</b></div><div class="tools"><button id="resume" onclick="resumeLive()">实时</button><button onclick="freeze(false)">冻结 / 分析</button><button onclick="setZoom('fit')">适应窗口</button><button onclick="setZoom(1)">1:1</button><select id="zoom" aria-label="图像缩放" onchange="setZoom(this.value)"><option value="fit">自适应</option><option value=".5">50%</option><option value="1">100%</option><option value="2">200%</option><option value="4">400%</option></select><button onclick="fullScreen()">⛶ 全屏</button></div></div>
+  <div id="stage"><div id="imageWrap"><img id="video" alt="完整分辨率实时画面" draggable="false"><span id="crosshair"></span></div><div id="waiting"><span class="wait-icon">▧</span><b>等待采集画面</b><p>选择设备，点击「开始连续采集」</p></div></div>
+  <div class="image-footer"><span id="geometry">原图 — · 预览 — · 显示比例 —</span><span id="sequence">帧号 —</span><span id="previewFps">预览 — fps</span></div>
+ </div>
+ <div class="panel cache-panel"><div class="panel-title">帧缓存 <span id="historyCount" class="muted">0 / 16</span><div class="inline-actions"><button onclick="showRecent()">最近帧</button><button onclick="showSaved()">已保存</button><button onclick="saveSnapshot()">↓ 保存当前图像</button><button id="recordButton" onclick="recordToggle()">● 连续保存</button></div></div>
+  <div class="cache-settings"><label>预览缓存 <input id="historyLimit" type="number" min="1" max="64" value="16"> 帧</label><label>保存采样 <select id="recordFps"><option>5</option><option>1</option><option>2</option><option>10</option></select> fps</label><button onclick="applyCache()">应用</button><span id="recordStatus">未保存 · JPEG 序列，保留原始尺寸</span></div>
+  <div id="filmstrip"><span class="empty">新画面到达后，将以 2 fps 更新预览缓存</span></div>
+ </div>
+ <div class="panel logs"><div class="panel-title">运行事件 <span id="operation" class="muted">就绪</span></div><div id="events"><div class="muted">等待设备状态…</div></div></div>
+</section>
+<aside class="panel analysis">
+ <div class="panel-title">图像分析 <span class="muted">02</span></div>
+ <p class="hint">冻结一帧后分析原始 RGB 像素。点击图像可切换采样点，不使用 JPEG 近似值。</p>
+ <div class="pixel-card"><span>当前采样点</span><strong id="pixelPosition">X — / Y —</strong><div class="rgb"><i id="swatch"></i><span id="pixelRGB">R —　G —　B —</span></div></div>
+ <h3>灰度直方图 <span class="tag">0—255</span></h3><canvas id="histogram" width="440" height="160"></canvas>
+ <div class="stat-grid"><div>平均灰度<b id="mean">—</b></div><div>标准差<b id="stddev">—</b></div><div>最小 / 最大<b id="range">—</b></div><div>255 饱和占比<b id="saturation">—</b></div></div>
+ <h3>水平灰度曲线 <span id="row" class="tag">Y —</span></h3><canvas id="horizontal" width="440" height="120"></canvas>
+ <h3>垂直灰度曲线 <span id="column" class="tag">X —</span></h3><canvas id="vertical" width="440" height="120"></canvas>
+ <div class="divider"></div><h3>分层帧统计</h3>
+ <dl><dt>FPGA 报告丢帧</dt><dd id="hardwareDrops">—</dd><dt>主机主动跳帧</dt><dd id="hostSkip">—</dd><dt>DDR 主动跳帧</dt><dd id="ddrSkip">—</dd><dt>发送取帧跳过</dt><dd id="senderSkip">—</dd><dt>预览采样跳帧</dt><dd id="previewSkip">—</dd></dl>
+ <div id="stageDetails"></div><p class="hint">预览和保存可以独立采样。源帧序号缺口不等于 RoCE 网络丢包；未获得的统计显示「—」。</p>
+</aside>
+</main>
+<footer><span>● FPGA 视频经 DDR/RDMA 传输 · TCP 仅交换控制与元数据</span><span id="savePath">保存位置：项目 captures 文件夹</span></footer>
+<div id="toast" role="status"></div><script src="/console.js"></script></body></html>

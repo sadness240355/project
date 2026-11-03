@@ -1,0 +1,97 @@
+--- ernic_video_sender.c.before
++++ ernic_video_sender.c
+@@ -500,10 +500,9 @@
+   uint64_t ready_to_rdma_ns=0,ready_to_notice_ns=0,latency_peak_ns=0,reference_wait_ns=0;
+   while(!video_stop && !atomic_load(&box_tx.failed) && (!count || submitted<count)) {
+     if(pending==VIDEO_WINDOW) {
+-      /* The native LRDMA engine is WRITE-only. Credits return on the already
+-       * negotiated control socket after the receiver copies and checks each
+-       * frame; pixel payload and ordered commit remain RDMA WRITEs. */
+-      uint64_t wait_t=video_ns();int a=video_ack_recv(sockfd,pending_ids[done%VIDEO_WINDOW]);
++      /* Direct DDR mode receives cumulative RDMA credits after the peer
++       * checks and copies each frame. Legacy host-SHM mode keeps TCP ACKs. */
++      uint64_t wait_t=video_ns();int a=(ddr?video_credit_wait(credit_buf,(uint64_t)done+1,submitted):video_ack_recv(sockfd,pending_ids[done%VIDEO_WINDOW]));
+       uint64_t waited_ns=video_ns()-wait_t;
+       control_seconds+=waited_ns/1e9;prof_credit_ns+=waited_ns;
+       if(a<0){fprintf(stderr,"FAIL: frame credit/CRC ACK rejected\n");validation_status=1;break;}
+@@ -525,7 +524,13 @@
+         frame.frame_id=htobe64(ddr_current->frame_id);frame.capture_ns=htobe64(ddr_current->ready_ns);
+         frame.publish_seq=htobe64((uint64_t)ddr_index+1);got=1;
+       } else if(atomic_load_explicit(&ddr->owner_stop,memory_order_acquire)) {
+-        fprintf(stderr,"FAIL: DDR capture owner stopped\n");validation_status=1;break;
++        /* EOF is valid only after every published DDR source has completed
++         * both local DMA and RDMA reads. Pending peer credits drain below. */
++        if(atomic_load_explicit(&ddr->published,memory_order_acquire)!=(uint64_t)ddr_index ||
++           atomic_load_explicit(&ddr->released,memory_order_acquire)!=(uint64_t)ddr_index) {
++          fprintf(stderr,"FAIL: DDR owner stopped with unreleased source frames\n");validation_status=1;
++        } else fprintf(stderr,"DDR_SOURCE_EOF all_published_sources_released=1 draining_peer_credits=1\n");
++        break;
+       }
+     } else {
+       got=video_shm_snapshot(&input,last_pub,snapshot,payload_size,&frame);
+@@ -652,7 +657,7 @@
+       ddr_index++;
+     }
+     // Direct DDR mode publishes metadata and an ordered commit via RDMA;
+-    // receiver credits return over the control socket after ownership release.
++    // receiver credits return through the registered RDMA mailbox after ownership release.
+     t=video_ns();
+     if(ddr) {
+       memcpy(meta_buf->buffer,&frame,sizeof(frame));
+@@ -702,7 +707,7 @@
+   if(atomic_load(&box_tx.failed))validation_status=1;
+   // Drain all per-slot ownership ACKs before END or normal teardown.
+   while(!validation_status && pending) {
+-    uint64_t t=video_ns();int a=video_ack_recv(sockfd,pending_ids[done%VIDEO_WINDOW]);
++    uint64_t t=video_ns();int a=(ddr?video_credit_wait(credit_buf,(uint64_t)done+1,submitted):video_ack_recv(sockfd,pending_ids[done%VIDEO_WINDOW]));
+     control_seconds+=(video_ns()-t)/1e9;
+     if(a<0){validation_status=1;fprintf(stderr,"FAIL: final frame ACK rejected\n");break;}
+     done++;pending--;if(a==2)video_stop=1;
+@@ -733,6 +738,18 @@
+   }
+   video_boxes_close(&boxes_reader);free(snapshot);video_shm_close(&input);
+ 
++  /* Peer END ACKs precede disabling both QPs; coherent credit memory
++   * remains alive through QP retirement and a quiet interval. */
++  if(ddr && !validation_status) {
++    write32_data(rdma_dev->axil_ctl,0x300000,read32_data(rdma_dev->axil_ctl,0x300000)&~1u);
++    if((read32_data(rdma_dev->axil_ctl,0x300000)&1u) ||
++       rn_rdma_prepare_qp(rdma_dev,qpid) || rn_rdma_prepare_qp(rdma_dev,BOX_CHANNEL_QPID)) {
++      fprintf(stderr,"FAIL: video QP retirement; safety hold PID %ld\n",(long)getpid());
++      for(;;)pause();
++    }
++    usleep(1000000);rn_dma_rmb();
++    fprintf(stderr,"VIDEO_QPS_RETIRED_RDMA_DISABLED_BEFORE_POOL_RELEASE\n");
++  }
+   free(cidb_buffer);
+   free(data_buf);
+   free(ipkterr_buf);
+--- video_box_sender.h.before
++++ video_box_sender.h
+@@ -94,7 +94,7 @@
+   memcpy((uint8_t*)c->payload->buffer+1024,&n,sizeof(n));
+   memcpy((uint8_t*)c->payload->buffer+1088,&commit,8);
+   /* One bounded hardware transaction at a time across the video and box QPs.
+-   * Keep H2D staging and TCP credit waits outside this shared RDMA gate. */
++   * Keep H2D staging and RDMA credit waits outside this shared RDMA gate. */
+   pthread_mutex_lock(c->rdma_submit_lock);
+   uint32_t slot=c->dev->qps_ptr[BOX_CHANNEL_QPID]->sq_pidb%RN_INTEROP_QDEPTH;
+   create_a_wqe(c->dev,BOX_CHANNEL_QPID,(uint16_t)++wrid,slot,boxes_source,
+@@ -111,7 +111,7 @@
+    for(;;)pause();
+   }
+   pthread_mutex_unlock(c->rdma_submit_lock);
+-  if(video_ack_recv(c->fd,sent+1)!=0) {
++  if(video_credit_wait(c->credit,sent+1,sent+1)!=0) {
+    atomic_store(&c->failed,1);atomic_store(&c->ddr->sender_state,DDR_SENDER_FAULT);
+    fprintf(stderr,"FAIL: boxes ownership ACK missing; safety hold PID %ld. Reset FPGA before killing.\n",(long)getpid());
+    for(;;)pause();
+@@ -125,7 +125,7 @@
+   struct box_notice end={htonl(BOX_CHANNEL_MAGIC),0,0};
+   if(rn_mlx5_send_all(c->fd,&end,sizeof(end))||video_ack_recv(c->fd,0)!=0)atomic_store(&c->failed,1);
+  }
+- fprintf(stderr,"BOXES sent=%" PRIu64 " publish=%" PRIu64 " final=1 transport=rdma_write_tcp_credit\n",sent,last);
++ fprintf(stderr,"BOXES sent=%" PRIu64 " publish=%" PRIu64 " final=1 transport=rdma_write_credit\n",sent,last);
+  box_stage_close(c);video_boxes_close(&reader);return NULL;
+ }
+ #endif

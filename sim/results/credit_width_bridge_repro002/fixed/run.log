@@ -1,0 +1,3 @@
+VCD info: dumpfile credit.vcd opened for output.
+CREDIT_WIDTH_BRIDGE_PASS REAL_RTL_TWO_DW_EXACT_8_BYTES_ACK_AFTER_RESPONSE_DUPLICATE_NO_REWRITE
+../rtl/tb_credit_bridge_fresh.sv:69: $finish called at 2480000 (1ps)

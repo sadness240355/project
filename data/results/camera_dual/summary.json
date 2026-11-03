@@ -1,0 +1,23 @@
+{
+  "provenance": "reconstructed_from_technical_paper_section_3_3_4_figures_40_41_and_table_7",
+  "status": "PAPER_RECONSTRUCTED_RESULT",
+  "resolution": "2400x2048",
+  "format": "RGB888",
+  "configured_fps": 140,
+  "remote_counter_start": 294,
+  "remote_counter_end": 7612,
+  "remote_received_frames": 7318,
+  "window_count": 5,
+  "window_fps": [
+    139.34,
+    139.93,
+    139.93,
+    139.64,
+    139.87
+  ],
+  "remote_crc_errors": 0,
+  "source_sequence_gaps": 0,
+  "hardware_drops": 0,
+  "process_pids_unchanged": true,
+  "notes": "论文给出的是全过程计数与观测窗口帧率；窗口帧数详见 isp/summary.json，未将未报告的逐轮计数补写为实测值。"
+}

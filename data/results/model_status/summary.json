@@ -1,0 +1,19 @@
+{
+  "provenance": "reconstructed_from_technical_paper_section_3_3_7_figures_46_47",
+  "status": "PAPER_RECONSTRUCTED_RESULT",
+  "device": "Jetson AGX Orin",
+  "duration_s": 60,
+  "resolution": "2400x2048",
+  "source_fps": 140,
+  "weights": "yolo11n.pt",
+  "weights_sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+  "engine": "yolo11n_640x384.engine",
+  "engine_sha256": "a9881aedf2379401e9f94b9e7d585f1cab9a6ebf3124d98bb0da518171a12c79",
+  "input": "640x384 FP16 TensorRT",
+  "detector": "YOLO11n",
+  "tracker": "ByteTrack",
+  "local_detection_tracking_fps_mean": 46.69,
+  "remote_received_frames": 8306,
+  "remote_crc_errors": 0,
+  "notes": "论文报告的60 s应用结果；两端截图取自不同时刻，不能据此宣称严格同帧显示。"
+}

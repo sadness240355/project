@@ -1,0 +1,32 @@
+{
+  "status": "C_MODEL_78_CASES_PASS_NOT_RTL_OR_BOARD",
+  "script": "sim/run_isp_csim.sh",
+  "successful_run": "sim/results/isp_csim004_fullframe",
+  "independent_reference": "fresh scalar image oracle; boundary replication, bilinear interpolation, Q4.12 processing, analytic sRGB curve",
+  "cases": 78,
+  "checks": [
+    "all output pixel bytes",
+    "beat count",
+    "SOF and final TLAST",
+    "KEEP/STRB/ID/DEST",
+    "consecutive frame state isolation"
+  ],
+  "scope_excluded": [
+    "RTL cosimulation",
+    "AXI backpressure timing",
+    "live mid-frame register changes",
+    "physical camera sampling",
+    "board CRC",
+    "E13 complete experiment"
+  ],
+  "failed_attempts": {
+    "isp_csim001": "HLS rejects absolute project name; fixed to relative project under unique run directory",
+    "isp_csim002": "bundled old linker cannot read host glibc RELR sections; selected system linker through csim_design -ldflags -B/usr/bin"
+  },
+  "full_frame": {
+    "width": 2400,
+    "height": 2048,
+    "mask": 15,
+    "pixel_bytes_checked": 14745600
+  }
+}

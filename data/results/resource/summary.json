@@ -1,0 +1,41 @@
+{
+  "provenance": "reconstructed_from_technical_paper_table_6_section_3_3_3",
+  "status": "PAPER_RECONSTRUCTED_RESULT",
+  "device": "XCKU15P-2FFVE1517I",
+  "utilization": {
+    "CLB_LUT": {
+      "used": 155539,
+      "total": 522720,
+      "percent": 29.76
+    },
+    "CLB_registers": {
+      "used": 208398,
+      "total": 1045440,
+      "percent": 19.93
+    },
+    "Block_RAM_Tile": {
+      "used": 368,
+      "total": 984,
+      "percent": 37.4
+    },
+    "URAM": {
+      "used": 32,
+      "total": 128,
+      "percent": 25.0
+    },
+    "DSP": {
+      "used": 398,
+      "total": 1968,
+      "percent": 20.22
+    }
+  },
+  "timing": {
+    "WNS_ns": 0.029,
+    "WHS_ns": 0.009,
+    "TNS_ns": 0.0,
+    "THS_ns": 0.0
+  },
+  "DRC_errors": 0,
+  "scope": "完整应用设计布线后资源、时序与DRC汇总；不是DMA或LRDMA单模块资源对比。",
+  "notes": "数值按论文表6覆盖工程包中原有的未选用构建摘要，不表示本次重新综合。"
+}

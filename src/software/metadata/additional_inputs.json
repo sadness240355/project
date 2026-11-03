@@ -1,0 +1,31 @@
+{
+  "baseline_candidates": [
+    {
+      "path": "src/rtl/baselines/ernic_0.xci",
+      "sha256": "f62440b3542a1bf32f55a726b0f574a0f88197af4ef35f43ea137246bb180ab1",
+      "component": "xilinx.com:ip:ernic:4.0",
+      "status": "SOURCE_CONFIGURATION_CANDIDATE_NOT_FRESH_SYNTHESIS_RESULT"
+    },
+    {
+      "path": "src/rtl/baselines/qdma_0.xci",
+      "sha256": "048c9bae5724dbaf4227499caf2b4e0db19a98edcdb12497af6fab176546ee11",
+      "component": "xilinx.com:ip:qdma:5.0",
+      "status": "SOURCE_CONFIGURATION_CANDIDATE_NOT_FRESH_SYNTHESIS_RESULT"
+    }
+  ],
+  "hls_source": [
+    {
+      "path": "src/hls/bayer_rg8_to_rgba8888.cpp",
+      "sha256": "df6955bc2df31a42ecf90f5e13559ea5487d8a6085ec4b2ce5c5b5235e5b91e7",
+      "origin": "src/hls/bayer_rg8_to_rgba8888.cpp",
+      "scope": "design source, not existing testbench or result"
+    },
+    {
+      "path": "src/hls/bayer_rg8_to_rgba8888.hpp",
+      "sha256": "97cf1fe7a18be8e46409ab63590e308d09d300391943ed8a839ef58c73ea5113",
+      "origin": "src/hls/bayer_rg8_to_rgba8888.hpp",
+      "scope": "design source, not existing testbench or result"
+    }
+  ],
+  "path_policy": "package-relative"
+}

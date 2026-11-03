@@ -1,0 +1,120 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'rui' on host 'rui-MS-7E30' (Linux_x86_64 version 7.0.0-28-generic) on Thu Oct 29 17:54:42 CST 2026
+INFO: [HLS 200-10] On os Ubuntu 24.04.3 LTS
+INFO: [HLS 200-10] In directory '/home/rui/vivado_pro/new/lrdma/reproduce_20261029/sim/results/isp_csim004_fullframe'
+Sourcing Tcl script '/home/rui/vivado_pro/new/lrdma/reproduce_20261029/sim/isp_csim.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset project 
+INFO: [HLS 200-10] Creating and opening project '/home/rui/vivado_pro/new/lrdma/reproduce_20261029/sim/results/isp_csim004_fullframe/project'.
+INFO: [HLS 200-1510] Running: set_top bayer_rg8_to_rgba8888 
+INFO: [HLS 200-1510] Running: add_files /home/rui/vivado_pro/new/lrdma/reproduce_20261029/source/hls/bayer_rg8_to_rgba8888.cpp 
+INFO: [HLS 200-10] Adding design file '/home/rui/vivado_pro/new/lrdma/reproduce_20261029/source/hls/bayer_rg8_to_rgba8888.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb /home/rui/vivado_pro/new/lrdma/reproduce_20261029/sim/tb_isp_fresh.cpp -cflags -I/home/rui/vivado_pro/new/lrdma/reproduce_20261029/source/hls 
+INFO: [HLS 200-10] Adding test bench file '/home/rui/vivado_pro/new/lrdma/reproduce_20261029/sim/tb_isp_fresh.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/home/rui/vivado_pro/new/lrdma/reproduce_20261029/sim/results/isp_csim004_fullframe/project/solution'.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xcku15p-ffve1517-2-i 
+INFO: [HLS 200-1611] Setting target device to 'xcku15p-ffve1517-2-i'
+INFO: [HLS 200-1510] Running: create_clock -period 4 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-1510] Running: csim_design -clean -ldflags -B/usr/bin 
+Running Dispatch Server on port: 34117
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../../tb_isp_fresh.cpp in debug mode
+   Compiling ../../../../../../../source/hls/bayer_rg8_to_rgba8888.cpp in debug mode
+   Generating csim.exe
+ISP_CASE_PASS,w=8,h=1,mask=0,seed=1,pixels=8
+ISP_CASE_PASS,w=8,h=1,mask=1,seed=2,pixels=8
+ISP_CASE_PASS,w=8,h=1,mask=2,seed=3,pixels=8
+ISP_CASE_PASS,w=8,h=1,mask=4,seed=4,pixels=8
+ISP_CASE_PASS,w=8,h=1,mask=8,seed=5,pixels=8
+ISP_CASE_PASS,w=8,h=1,mask=15,seed=6,pixels=8
+ISP_CASE_PASS,w=8,h=2,mask=0,seed=7,pixels=16
+ISP_CASE_PASS,w=8,h=2,mask=1,seed=8,pixels=16
+ISP_CASE_PASS,w=8,h=2,mask=2,seed=9,pixels=16
+ISP_CASE_PASS,w=8,h=2,mask=4,seed=10,pixels=16
+ISP_CASE_PASS,w=8,h=2,mask=8,seed=11,pixels=16
+ISP_CASE_PASS,w=8,h=2,mask=15,seed=12,pixels=16
+ISP_CASE_PASS,w=8,h=5,mask=0,seed=13,pixels=40
+ISP_CASE_PASS,w=8,h=5,mask=1,seed=14,pixels=40
+ISP_CASE_PASS,w=8,h=5,mask=2,seed=15,pixels=40
+ISP_CASE_PASS,w=8,h=5,mask=4,seed=16,pixels=40
+ISP_CASE_PASS,w=8,h=5,mask=8,seed=17,pixels=40
+ISP_CASE_PASS,w=8,h=5,mask=15,seed=18,pixels=40
+ISP_CASE_PASS,w=8,h=9,mask=0,seed=19,pixels=72
+ISP_CASE_PASS,w=8,h=9,mask=1,seed=20,pixels=72
+ISP_CASE_PASS,w=8,h=9,mask=2,seed=21,pixels=72
+ISP_CASE_PASS,w=8,h=9,mask=4,seed=22,pixels=72
+ISP_CASE_PASS,w=8,h=9,mask=8,seed=23,pixels=72
+ISP_CASE_PASS,w=8,h=9,mask=15,seed=24,pixels=72
+ISP_CASE_PASS,w=16,h=1,mask=0,seed=25,pixels=16
+ISP_CASE_PASS,w=16,h=1,mask=1,seed=26,pixels=16
+ISP_CASE_PASS,w=16,h=1,mask=2,seed=27,pixels=16
+ISP_CASE_PASS,w=16,h=1,mask=4,seed=28,pixels=16
+ISP_CASE_PASS,w=16,h=1,mask=8,seed=29,pixels=16
+ISP_CASE_PASS,w=16,h=1,mask=15,seed=30,pixels=16
+ISP_CASE_PASS,w=16,h=2,mask=0,seed=31,pixels=32
+ISP_CASE_PASS,w=16,h=2,mask=1,seed=32,pixels=32
+ISP_CASE_PASS,w=16,h=2,mask=2,seed=33,pixels=32
+ISP_CASE_PASS,w=16,h=2,mask=4,seed=34,pixels=32
+ISP_CASE_PASS,w=16,h=2,mask=8,seed=35,pixels=32
+ISP_CASE_PASS,w=16,h=2,mask=15,seed=36,pixels=32
+ISP_CASE_PASS,w=16,h=5,mask=0,seed=37,pixels=80
+ISP_CASE_PASS,w=16,h=5,mask=1,seed=38,pixels=80
+ISP_CASE_PASS,w=16,h=5,mask=2,seed=39,pixels=80
+ISP_CASE_PASS,w=16,h=5,mask=4,seed=40,pixels=80
+ISP_CASE_PASS,w=16,h=5,mask=8,seed=41,pixels=80
+ISP_CASE_PASS,w=16,h=5,mask=15,seed=42,pixels=80
+ISP_CASE_PASS,w=16,h=9,mask=0,seed=43,pixels=144
+ISP_CASE_PASS,w=16,h=9,mask=1,seed=44,pixels=144
+ISP_CASE_PASS,w=16,h=9,mask=2,seed=45,pixels=144
+ISP_CASE_PASS,w=16,h=9,mask=4,seed=46,pixels=144
+ISP_CASE_PASS,w=16,h=9,mask=8,seed=47,pixels=144
+ISP_CASE_PASS,w=16,h=9,mask=15,seed=48,pixels=144
+ISP_CASE_PASS,w=40,h=1,mask=0,seed=49,pixels=40
+ISP_CASE_PASS,w=40,h=1,mask=1,seed=50,pixels=40
+ISP_CASE_PASS,w=40,h=1,mask=2,seed=51,pixels=40
+ISP_CASE_PASS,w=40,h=1,mask=4,seed=52,pixels=40
+ISP_CASE_PASS,w=40,h=1,mask=8,seed=53,pixels=40
+ISP_CASE_PASS,w=40,h=1,mask=15,seed=54,pixels=40
+ISP_CASE_PASS,w=40,h=2,mask=0,seed=55,pixels=80
+ISP_CASE_PASS,w=40,h=2,mask=1,seed=56,pixels=80
+ISP_CASE_PASS,w=40,h=2,mask=2,seed=57,pixels=80
+ISP_CASE_PASS,w=40,h=2,mask=4,seed=58,pixels=80
+ISP_CASE_PASS,w=40,h=2,mask=8,seed=59,pixels=80
+ISP_CASE_PASS,w=40,h=2,mask=15,seed=60,pixels=80
+ISP_CASE_PASS,w=40,h=5,mask=0,seed=61,pixels=200
+ISP_CASE_PASS,w=40,h=5,mask=1,seed=62,pixels=200
+ISP_CASE_PASS,w=40,h=5,mask=2,seed=63,pixels=200
+ISP_CASE_PASS,w=40,h=5,mask=4,seed=64,pixels=200
+ISP_CASE_PASS,w=40,h=5,mask=8,seed=65,pixels=200
+ISP_CASE_PASS,w=40,h=5,mask=15,seed=66,pixels=200
+ISP_CASE_PASS,w=40,h=9,mask=0,seed=67,pixels=360
+ISP_CASE_PASS,w=40,h=9,mask=1,seed=68,pixels=360
+ISP_CASE_PASS,w=40,h=9,mask=2,seed=69,pixels=360
+ISP_CASE_PASS,w=40,h=9,mask=4,seed=70,pixels=360
+ISP_CASE_PASS,w=40,h=9,mask=8,seed=71,pixels=360
+ISP_CASE_PASS,w=40,h=9,mask=15,seed=72,pixels=360
+ISP_CASE_PASS,w=40,h=9,mask=15,seed=73,pixels=360
+ISP_CASE_PASS,w=40,h=9,mask=0,seed=74,pixels=360
+ISP_CASE_PASS,w=40,h=9,mask=15,seed=75,pixels=360
+ISP_CASE_PASS,w=40,h=9,mask=0,seed=76,pixels=360
+ISP_CASE_PASS,w=40,h=9,mask=15,seed=77,pixels=360
+ISP_CASE_PASS,w=2400,h=2048,mask=15,seed=78,pixels=4915200
+ISP_CSIM_PASS,cases=78,SCOPE=C_MODEL_ONLY_NOT_RTL_OR_BOARD
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 614400
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 48.12 seconds. CPU system time: 0.64 seconds. Elapsed time: 48.82 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 49.3 seconds. Total CPU system time: 1.08 seconds. Total elapsed time: 60.32 seconds; peak allocated memory: 747.777 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Thu Oct 29 17:55:42 2026...

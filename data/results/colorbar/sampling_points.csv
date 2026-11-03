@@ -1,0 +1,3 @@
+path,reported_rounds,frame_bytes,window_seconds,MiB_s,Gbit_s,physical_rx_Gbit_s,CRC_checks_reported,CRC_errors,source_scope
+DMA,2,14745600,60,6642.075,55.718,,,0,论文表8两轮复测的60 s汇总
+RDMA,2,14745600,60,10990.549,92.195,94.64,,0,论文表8两轮复测的60 s汇总

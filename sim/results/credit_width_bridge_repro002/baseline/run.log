@@ -1,0 +1,3 @@
+VCD info: dumpfile credit.vcd opened for output.
+BASELINE_BRIDGE_STALL_REPRODUCED AWSIZE3 state=WRITE unsupported=1
+../rtl/tb_credit_bridge_fresh.sv:60: $finish called at 2888000 (1ps)

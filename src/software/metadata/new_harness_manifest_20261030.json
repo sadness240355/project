@@ -1,0 +1,365 @@
+{
+  "scope": "current scripts; per-run sources/results preserved separately",
+  "files": [
+    {
+      "path": "board/bounce_diagnostic.py",
+      "sha256": "6262c76ff746e3c4249225a94081fadaab08dd73e0af395e87ae7798b9064de7"
+    },
+    {
+      "path": "board/build_camera_capture.sh",
+      "sha256": "ca09f6de9cabfec34c16f49a3ccf87345a135ac18b0217497a84ba028c5e1f32"
+    },
+    {
+      "path": "board/build_camera_local_candidate.sh",
+      "sha256": "9f2bac4a3fb11adf122e6e775ba8e11fb5324ad5a506ae6f21664f56cd140816"
+    },
+    {
+      "path": "board/build_colorbar_rdma.sh",
+      "sha256": "b92739bc6733fc6181a00d7aeafbf6cba035f20ff902c8a08aea493f4c00ae33"
+    },
+    {
+      "path": "board/build_credit_reverse.sh",
+      "sha256": "3c603c9dace70c22540852eb190fc05ccb2c221c0db42b01fd26ef8b128f3f9c"
+    },
+    {
+      "path": "board/build_driver.sh",
+      "sha256": "620f0afea6c76b96c55689b6e08b11a9d63690d2b253cc5e81b14d41f6e103a5"
+    },
+    {
+      "path": "board/build_rdma_bench.sh",
+      "sha256": "5edf1edfc785d8cb7e2ffb6fa86154f69a6593c21465d3477fab1efe79dc9e11"
+    },
+    {
+      "path": "board/build_runtime_lib.sh",
+      "sha256": "5b336bd7f1bde16ed6fe259d86c0aa1bccb08f0980e3b353efd42ee1ccaa52f5"
+    },
+    {
+      "path": "board/build_video_transport.sh",
+      "sha256": "4dbe5016f4780440a3ef53d8e2a8e51d6691a100ed69a968ec08b4c8cdc217be"
+    },
+    {
+      "path": "board/camera_capture_fresh.c",
+      "sha256": "bfe12441706287283b94e25f1b1c95738fc5bce0a6a65743757107be08d3d81e"
+    },
+    {
+      "path": "board/camera_capture_local_candidate.c",
+      "sha256": "4157d9f32804433841ac46aab91a59a572c819d8c838b4d0f421294140780451"
+    },
+    {
+      "path": "board/camera_register_probe.py",
+      "sha256": "95bca314185eafca6630f7018569660d6ec84caab33e05b5eefa6b8518cd6ef7"
+    },
+    {
+      "path": "board/camera_state_full.py",
+      "sha256": "94eaeeddf954be0c8687df632caef4b305c18a888a57a6b403551a39536d7231"
+    },
+    {
+      "path": "board/colorbar_dma.c",
+      "sha256": "c2569aac6fbf0e727bbbcc94d006a04d8791ac2165b874b8a49709c9dd8455c3"
+    },
+    {
+      "path": "board/colorbar_rdma_sender.c",
+      "sha256": "d8fa7d7a3b193e63332ebf44c4df2810ca51476c3c714bbf12f198ad2b02e881"
+    },
+    {
+      "path": "board/credit_reverse_fpga.c",
+      "sha256": "b3f335f48512dac1611d4a9ccb779851cdf58f36a502effc2837ceab54da3f7b"
+    },
+    {
+      "path": "board/credit_reverse_server.c",
+      "sha256": "aad17de29a6688e0700587ec9b45c3735949eff4e360a2a9a30613de444944a7"
+    },
+    {
+      "path": "board/device_probe.py",
+      "sha256": "48173ba36d0fcb0a5f884bd86315dbca7892b50d06b8d17525844aa7ce593d0a"
+    },
+    {
+      "path": "board/dma_matrix.c",
+      "sha256": "b67f38a9e186c845829c69af9400921311470142f441b40b0e2344ed28c45288"
+    },
+    {
+      "path": "board/icmp_fresh.py",
+      "sha256": "00c1562e5207e1b74f3afe4e3d1022ce95738548411a4cb717f73bc2dc80a186"
+    },
+    {
+      "path": "board/isolate_mm.py",
+      "sha256": "567b19ba3f5fce05c52c0a41b5ba892075dad2138962ff166088b3ce7240c914"
+    },
+    {
+      "path": "board/jtag_memory_probe.tcl",
+      "sha256": "3dba4523d3adeff50f568186bf0e1d0f53bc5304c566d38440f2c65d058b1a20"
+    },
+    {
+      "path": "board/jtag_probe.tcl",
+      "sha256": "80331d2f561d912d78e9836e3df6697dce2183679b85929d8267c0477eb2c3ad"
+    },
+    {
+      "path": "board/live_isp_fresh.py",
+      "sha256": "107f4e9f7f2215dbcfd66323b7a88b056876c5e0a07dd090e5811d1749409b10"
+    },
+    {
+      "path": "board/live_isp_register_fresh.py",
+      "sha256": "bebfda45827b7d8482c0989f8fdd81164abb8b7ab9a396d42219303c716931f5"
+    },
+    {
+      "path": "board/park_failed_dual.py",
+      "sha256": "504433333adf4a1e24e9c6633c7d33e59b6bcd772334076e8125b26189db9b7b"
+    },
+    {
+      "path": "board/preflight.py",
+      "sha256": "ef47d8b1e0dc0d83b86427fd29adc65194347319df8e54565768b49cc5dd0dcb"
+    },
+    {
+      "path": "board/program.tcl",
+      "sha256": "bcf6d055fa0d8a97d6937213a27c95f06f151f0e298917692c186d681a5134d2"
+    },
+    {
+      "path": "board/program_fresh.sh",
+      "sha256": "d32c79db4159c1aaeee59107f48562b4ed238720670ce6ea705bafdc988472a9"
+    },
+    {
+      "path": "board/rdma_state_fresh.py",
+      "sha256": "2e4599dd772a33c441d38792442553441231d703a0295e7b533eba288004e2de"
+    },
+    {
+      "path": "board/rdma_verify_receiver.c",
+      "sha256": "20dcf17299c82afee4a2090edb74e47f143b87a594e5660c647c0a4a2ca409fa"
+    },
+    {
+      "path": "board/rdma_write_sender.c",
+      "sha256": "42187df081d61afd1ac6c40a768c10273bfb7c79e83a9803dc24684573cf0b55"
+    },
+    {
+      "path": "board/read_failure_state.py",
+      "sha256": "896e08c4a40026b58c96765eec9af1bf26dc29fb4c98f76afa87a2ea37409fd9"
+    },
+    {
+      "path": "board/receiver_probe.c",
+      "sha256": "244c1fe211b43ceb8ca5ead8e93c9b88e967370b15dd1ae82924f1ce7bedf604"
+    },
+    {
+      "path": "board/reconfigure_pcie.sh",
+      "sha256": "963388ec97548e4dbd88bf3e63f2862516c6575eb32c945c134445f4f046dd8f"
+    },
+    {
+      "path": "board/recover_camera003_idle.py",
+      "sha256": "593b7e9b8d1f51d6044310cd7532b9b4c10ffe0a7009e3e2969dd65907c55e39"
+    },
+    {
+      "path": "board/recover_closed_camera_tail.py",
+      "sha256": "b1ce8882ee3a4e3aed4a107355b71999f05f475c709e95db67903306a103bb2a"
+    },
+    {
+      "path": "board/recover_credit_reverse001.py",
+      "sha256": "be808708057a4c3316e65a4c9e5c08307de6fcd3db0501770bb3e83cb6bf50fb"
+    },
+    {
+      "path": "board/recover_credit_reverse002.py",
+      "sha256": "cadd992548077706f151423a61b49b4cfded8a52cb3ae932941d0de2248bab1e"
+    },
+    {
+      "path": "board/recover_dual_failed003.py",
+      "sha256": "2deb33b87e6d86d188097f75415ed0dfadbc4c7bc8bc6356729ac5b9e0f49c6f"
+    },
+    {
+      "path": "board/recover_dual_failed003_step2.py",
+      "sha256": "62c4ed187207ddf6a884446fea5f4cb2a3219359ae14fb6f38921fc367fa6f86"
+    },
+    {
+      "path": "board/recover_local_collision001.py",
+      "sha256": "08069d77a9e1ff3d0b0674627c01bcd96b756aa36e655de08cd9ae12e7499958"
+    },
+    {
+      "path": "board/reset_and_release_owned.py",
+      "sha256": "d4f7be673395e11dc6c59b606262e1f8fee340ff39e2decebc709d6488d3c686"
+    },
+    {
+      "path": "board/run_camera_capture.sh",
+      "sha256": "9dfcc0d4ba6af1b8433528a05c4df5da9187fb48535d7c02a22c91c04649b840"
+    },
+    {
+      "path": "board/run_camera_local_candidate.sh",
+      "sha256": "c3ddd1acefe537dd28875b143073a3350f16812803e4ec979efeef8904433e4d"
+    },
+    {
+      "path": "board/run_camera_video_receiver.sh",
+      "sha256": "4ba0f650e368da612dd2d68bbf664b9b0722772d91a810f49850bfc9f9874e09"
+    },
+    {
+      "path": "board/run_camera_video_sender.sh",
+      "sha256": "a11c16b016ef9de0aeb1d6714c7b5fa38945befb5856e678c64518215a0fb9ff"
+    },
+    {
+      "path": "board/run_colorbar_dma.sh",
+      "sha256": "f5773dd878482f5c82f80aff758ea20f533d645f28205b9ce4660b0a6406420d"
+    },
+    {
+      "path": "board/run_colorbar_dma_rounds.sh",
+      "sha256": "b8bac8bccf8c20511aacc2024044af35f258f4655cd58c05364235453a5ddc10"
+    },
+    {
+      "path": "board/run_colorbar_rdma.sh",
+      "sha256": "cc92fa18e4df955f33ca09557886d63f044681b287aadbc3c320c1365e3a1b24"
+    },
+    {
+      "path": "board/run_colorbar_rdma_receiver_rounds.sh",
+      "sha256": "77223d5b841c82219ae8be7dd6179d9c8312a596922461462fbb9a5a8a296543"
+    },
+    {
+      "path": "board/run_colorbar_rdma_sender_rounds.sh",
+      "sha256": "c3466ae0fbe2a4548bd5650d69190961eed243254da6963dc0c9ede78ea2c3e0"
+    },
+    {
+      "path": "board/run_credit_reverse.sh",
+      "sha256": "19b92ecc32e83b9f8892b5d42b2be341257dab93bd0db2ceed18e31c410889c3"
+    },
+    {
+      "path": "board/run_credit_reverse_capture.sh",
+      "sha256": "b6a0ae6ac79ad28c98d30d41eaf2b1d57e27efb4928aca36c7570d28176a6955"
+    },
+    {
+      "path": "board/run_dma_matrix.sh",
+      "sha256": "a8ffb039bbc9a3ca0bb5f01241aaf38d4991acff9bb0c312ecdde48ee720b671"
+    },
+    {
+      "path": "board/run_rdma_receiver.sh",
+      "sha256": "e3833b229e6af5078bb55754aac11e10b78776ae9ecd60f77d1deada1408e3cd"
+    },
+    {
+      "path": "board/run_rdma_receiver_matrix.sh",
+      "sha256": "96b78aff1bfb3b20388670bd332186fec096412a177b703b4d4f5181f80d9bcc"
+    },
+    {
+      "path": "board/run_rdma_sender.sh",
+      "sha256": "b15a4e89385d0949e661c0fc8a1ee74ad074cea36a48aaa6af907de9fb2a185a"
+    },
+    {
+      "path": "board/run_rdma_sender_matrix.sh",
+      "sha256": "7670b28e6faefa9d10e889b355676d4a70bd1f443b2924e81c5cf5a52291a1e8"
+    },
+    {
+      "path": "board/run_receiver_probe.sh",
+      "sha256": "19bcb2564f55195764551d7b5363a6919b99122e773c4ce1b55b7372c3979abc"
+    },
+    {
+      "path": "board/session_preflight.py",
+      "sha256": "d77fdf6e81915b8470e23fb3c9081e4366feffa2f4d1a1209536ce27509eb019"
+    },
+    {
+      "path": "build/analyze_reports.py",
+      "sha256": "60c5e8b6766ddf936214b7ad90ecad4a0c05066c8a6365185a494d6a582f6452"
+    },
+    {
+      "path": "build/baselines.tcl",
+      "sha256": "f26411ba1dd8b5ef512e406922d0ae47011d64a7dab5e9c09cee979bbf05fffa"
+    },
+    {
+      "path": "build/check_baselines.tcl",
+      "sha256": "f8049fd0f34b3b86e2f2312ee5db7d215b5311fe09805dd19cebe88a2f425080"
+    },
+    {
+      "path": "build/launch_credit_candidate.sh",
+      "sha256": "0e98815da183e6e1010de3e087c8a011d50c87241aec8925ce36df5252494282"
+    },
+    {
+      "path": "build/queue_baselines.sh",
+      "sha256": "415609d35f8c493d4d4918215b7eabd0428b64f9a8f305b4023ad197e375db88"
+    },
+    {
+      "path": "build/rebuild.tcl",
+      "sha256": "35886b955e4fb95d62f213e72c4fe3271088b8ed5b3c407cdf192f3c5ea60527"
+    },
+    {
+      "path": "build/run_credit_candidate.sh",
+      "sha256": "2ce19f042f4ebbdd0adf397e2c71d6f49d48228b54386b3e75c462d7428eb0c3"
+    },
+    {
+      "path": "build/run_remote.sh",
+      "sha256": "e77da20694c10b7c0c696bed5f4fb892a509bdd05ba4ba3d1f78d0f5e1f9b57e"
+    },
+    {
+      "path": "build/snapshot_remote.py",
+      "sha256": "21ebb712d49ce3d568312830f19f8a0bf6ddeee51b3bfac3903951f031868369"
+    },
+    {
+      "path": "sim/gen_credit_packet.py",
+      "sha256": "2bf1a667cb05725d406fd8064caa759b1a4c262a30bddc35fccd83131475f140"
+    },
+    {
+      "path": "sim/isp_csim.tcl",
+      "sha256": "a2bda75cbb6ca8d379a0126d2749c92b1a3710d71a68d9969cb6072188ca1b65"
+    },
+    {
+      "path": "sim/run.sh",
+      "sha256": "e75323bdf83434bd5c1ba5c402cbd82a82f26637394bb1837055b4e7d514f2de"
+    },
+    {
+      "path": "sim/run_credit_fresh.sh",
+      "sha256": "ba8f8b5b664605f457c71d21dbaad15a017167e8f592ee0e9701f81eea07981f"
+    },
+    {
+      "path": "sim/run_isp_csim.sh",
+      "sha256": "c94e7d2655fc89641e814dfd8fc754345183ee3d1c9857b76cf60d8e3beef1d1"
+    },
+    {
+      "path": "sim/tb_credit_actual_packet.sv",
+      "sha256": "10c918280276df0c87dc4c76e8315d8cf60afdd3c7488423ee1e556c98308c8d"
+    },
+    {
+      "path": "sim/tb_credit_config_fresh.sv",
+      "sha256": "c5990ff126e7ea1516c4152fa97aba9e8a175c7e978fb6aee779bcfaa60c3260"
+    },
+    {
+      "path": "sim/tb_credit_fresh.sv",
+      "sha256": "447a4fe0d908df50f74ba1fa744b69af95769c195fc4e6a07d6262beeea94b87"
+    },
+    {
+      "path": "sim/tb_isp_fresh.cpp",
+      "sha256": "305122a84a71eb70f7e7c35855ebfcce6d7387a35d9d01fff0c9dbd6e96b7d93"
+    },
+    {
+      "path": "sim/tb_retransmit_ctrl.sv",
+      "sha256": "c9f3ca05f2cd6b65da1a74fb52dead6260d713ca43102224d3e1629602787dec"
+    },
+    {
+      "path": "data/generate_reference.py",
+      "sha256": "c9f6c322b490127b8587dffdfce055c44e89c30a1a5a6a8802c8505968cc265a"
+    },
+    {
+      "path": "data/inspect_credit_pcap.py",
+      "sha256": "c2d9568e353ce28e5c9ef77a6cc55f717134bc65017c13cc23e36b1771e26588"
+    },
+    {
+      "path": "data/plot_rdma.py",
+      "sha256": "383e050de83eba1ba7163b034f7515727757a7c7baedd00f2dcf6ea3a175e227"
+    },
+    {
+      "path": "data/summarize_camera_local.py",
+      "sha256": "219bd6182f20b1ba3c2c762b73aa15840cf995fd026f728468899b7044a2e869"
+    },
+    {
+      "path": "data/summarize_colorbar.py",
+      "sha256": "ebcd4dc912ec17c524774414adc1bdff38a682247f86514bc66969be49309edb"
+    },
+    {
+      "path": "data/summarize_dma.py",
+      "sha256": "741a786ab4b9d34f405dcba99cc4018bee10d33e4c07c66ac606dc30231f9257"
+    },
+    {
+      "path": "data/summarize_local_isp.py",
+      "sha256": "a7d328fb3d9840b290ab80ac857f30d60b94e7e53c2dcfd90d6cfb2f0173ba18"
+    },
+    {
+      "path": "data/summarize_rdma.py",
+      "sha256": "2a7bc0cf413f79d08170dbf4a69109ce8267073760622a360e25f46bed7f1705"
+    },
+    {
+      "path": "data/validate_dma_csv.py",
+      "sha256": "cbe1f797f4021059a0d8db62a79e93c3f71597eff780cd56795a938361762887"
+    },
+    {
+      "path": "data/validate_rdma_pair.py",
+      "sha256": "cd1e3565c1ed57e292ebd6cde01dfa1a293296886251e90733fd14e1b3b0ee66"
+    }
+  ]
+}

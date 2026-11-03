@@ -1,0 +1,472 @@
+{
+  "utc": "2026-10-30T02:04:52.402970+00:00",
+  "scope": "PRODUCTION_DUT_SOURCE_ONLY_NOT_EXISTING_VALIDATION_HARNESS",
+  "excluded": [
+    "tests/",
+    "validation/",
+    "captures/",
+    "models/",
+    "old build scripts/results",
+    "video_bandwidth.py",
+    "video_pressure.py"
+  ],
+  "files": [
+    {
+      "path": "application/software/capture_reference/camera_viewer_bayerrg8_egl.c",
+      "origin": "src/software/ui/capture_reference/camera_viewer_bayerrg8_egl.c",
+      "sha256": "f925ef389c4256321122c3a2bb7faa9bd7f21d5ff1a568c0fe3ac6883e0dcece",
+      "bytes": 88181
+    },
+    {
+      "path": "application/software/capture_reference/edev_camera_io.c",
+      "origin": "src/software/ui/capture_reference/edev_camera_io.c",
+      "sha256": "68efbe6249d863ce59399787e7f7b46a8563c25d9003e0efd5a2b45678fd8f35",
+      "bytes": 165599
+    },
+    {
+      "path": "application/software/capture_reference/edev_camera_io.h",
+      "origin": "src/software/ui/capture_reference/edev_camera_io.h",
+      "sha256": "4761528dcc89047e443d006f5885684730c6d67690ff691480808e006fff854e",
+      "bytes": 16212
+    },
+    {
+      "path": "application/software/capture_reference/hik_camera_cfg.c",
+      "origin": "src/software/ui/capture_reference/hik_camera_cfg.c",
+      "sha256": "28a0a8bc602a47ce739a5a1bc3b941ae416f033dcc5f45fc87ff922ed1d4cabf",
+      "bytes": 24454
+    },
+    {
+      "path": "application/software/capture_reference/video_host_yolo_sidecar.h",
+      "origin": "src/software/ui/capture_reference/video_host_yolo_sidecar.h",
+      "sha256": "c95ac040ef75999057223c61c6bea479ab0339c1e6484244eda980815f0057a5",
+      "bytes": 7507
+    },
+    {
+      "path": "application/software/console.css",
+      "origin": "src/software/ui/console.css",
+      "sha256": "6eaf0e8a787b4c7270a5a6b4e6893b927ac469741bed0043766768883ea53429",
+      "bytes": 10628
+    },
+    {
+      "path": "application/software/console.html",
+      "origin": "src/software/ui/console.html",
+      "sha256": "debc7ce19c9e94640f0345075c005d40bad5381f24dca00cd38ea6edfe6a11f5",
+      "bytes": 7920
+    },
+    {
+      "path": "application/software/console.js",
+      "origin": "src/software/ui/console.js",
+      "sha256": "19bd6c54ab849304fe8bc91ba5e7ad53e3f5b7de09aae8daeb66312ec691eb74",
+      "bytes": 13775
+    },
+    {
+      "path": "application/software/dual.html",
+      "origin": "src/software/ui/dual.html",
+      "sha256": "b7baea5bdec3170753087c428d4c032e61aaa2533f1f83bc1cc119a17314a182",
+      "bytes": 3226
+    },
+    {
+      "path": "application/software/lib/auxiliary.c",
+      "origin": "src/software/ui/lib/auxiliary.c",
+      "sha256": "5cee9620651227f257d504a083bcbf568182b9449ae775b2767f9ff0ea663ec7",
+      "bytes": 1210
+    },
+    {
+      "path": "application/software/lib/auxiliary.h",
+      "origin": "src/software/ui/lib/auxiliary.h",
+      "sha256": "72ef943a421197d4ae215e7c1a64c52bac453095db3926c001c9ef1341fb1c39",
+      "bytes": 2183
+    },
+    {
+      "path": "application/software/lib/control_api.c",
+      "origin": "src/software/ui/lib/control_api.c",
+      "sha256": "ea3d9314038023b6d66246bccec2c6907159ef6325e506ec1b096d13a9dba313",
+      "bytes": 2441
+    },
+    {
+      "path": "application/software/lib/control_api.h",
+      "origin": "src/software/ui/lib/control_api.h",
+      "sha256": "2b0330e72833d50126aa269f237024282227f75cde2e15d34bb6691ee272478e",
+      "bytes": 3725
+    },
+    {
+      "path": "application/software/lib/dma_pool.c",
+      "origin": "src/software/ui/lib/dma_pool.c",
+      "sha256": "80bd7b874ed0323b9ea9e025d4dbfd45286755a35ed37d5dfc97cc41df2f461d",
+      "bytes": 2377
+    },
+    {
+      "path": "application/software/lib/dma_pool.h",
+      "origin": "src/software/ui/lib/dma_pool.h",
+      "sha256": "bbc272dbc42a7dba5dc537c92ca6e438d03975b4eefcccb67c4d1c52c98b89bd",
+      "bytes": 1400
+    },
+    {
+      "path": "application/software/lib/memory_api.c",
+      "origin": "src/software/ui/lib/memory_api.c",
+      "sha256": "a40ef45669a5c5703be0d8c6156f085b711ab2db4e7920189020d63d9aed72fd",
+      "bytes": 3263
+    },
+    {
+      "path": "application/software/lib/memory_api.h",
+      "origin": "src/software/ui/lib/memory_api.h",
+      "sha256": "218b8faf16027ee8cb66a4cd9285c803d5540fc7dac85380bfbf7cbc8a7377e5",
+      "bytes": 2185
+    },
+    {
+      "path": "application/software/lib/rdma_api.c",
+      "origin": "src/software/ui/lib/rdma_api.c",
+      "sha256": "9bc80335327b35e5b560766f3193a0b2c41855c1cdfebcd638982434727c7fb1",
+      "bytes": 73039
+    },
+    {
+      "path": "application/software/lib/rdma_api.h",
+      "origin": "src/software/ui/lib/rdma_api.h",
+      "sha256": "b035f762233a7f3931cfc7fbfa87632a3881b2f25904c520b3d879b263b055cd",
+      "bytes": 19890
+    },
+    {
+      "path": "application/software/lib/reconic.c",
+      "origin": "src/software/ui/lib/reconic.c",
+      "sha256": "17a177bb0a6cc494f0ea67e9e1feb714833dbb976bf6f328ecb36baf1cf360cc",
+      "bytes": 22300
+    },
+    {
+      "path": "application/software/lib/reconic.h",
+      "origin": "src/software/ui/lib/reconic.h",
+      "sha256": "e4d89e4d926226d6fd414085c305fca1ed391a715ffa92a8daee1785261efcd8",
+      "bytes": 8431
+    },
+    {
+      "path": "application/software/lib/reconic_reg.h",
+      "origin": "src/software/ui/lib/reconic_reg.h",
+      "sha256": "c5b24ff331415741e04b956b06ffd1f828db2a63ad569caf7f68f4e976a6a104",
+      "bytes": 12044
+    },
+    {
+      "path": "application/software/src/ernic_video_sender.c",
+      "origin": "src/software/ui/src/ernic_video_sender.c",
+      "sha256": "8593de27c6b3b145b52ddf06d08762ccbebf109fa65d99b848ced6dd09818c37",
+      "bytes": 37503
+    },
+    {
+      "path": "application/software/src/mlx5_video_receiver.c",
+      "origin": "src/software/ui/src/mlx5_video_receiver.c",
+      "sha256": "0779b2f1d3a4afd596a422d641c7acf16a70390d62d971b1edcf8b59e0779bf2",
+      "bytes": 23757
+    },
+    {
+      "path": "application/software/src/rn_mlx5_protocol.h",
+      "origin": "src/software/ui/src/rn_mlx5_protocol.h",
+      "sha256": "f697c0106dc0390aa8015b8c9f312d8fb225d2ff931aba9d5f973c6b844fb343",
+      "bytes": 3206
+    },
+    {
+      "path": "application/software/src/video_box_channel.h",
+      "origin": "src/software/ui/src/video_box_channel.h",
+      "sha256": "af87873d5cc5803112f4d9ec5e7a2233884df048471c50236e63071c5fd9a3af",
+      "bytes": 2450
+    },
+    {
+      "path": "application/software/src/video_box_receiver.h",
+      "origin": "src/software/ui/src/video_box_receiver.h",
+      "sha256": "08521f7ed14dba2a7eadd0ddc9f5179218901c6c0cba3c89194cc7abace8a24a",
+      "bytes": 5178
+    },
+    {
+      "path": "application/software/src/video_box_sender.h",
+      "origin": "src/software/ui/src/video_box_sender.h",
+      "sha256": "00e68af54078557e315e3c3631f793fa481fbd26e08f4ac37f491bbca0c678dc",
+      "bytes": 5987
+    },
+    {
+      "path": "application/software/src/video_boxes.h",
+      "origin": "src/software/ui/src/video_boxes.h",
+      "sha256": "753a9a9626e9eaebdea7ffadfc975c921c46c01daf2a6bbc3a0457892d30a162",
+      "bytes": 5404
+    },
+    {
+      "path": "application/software/src/video_common.h",
+      "origin": "src/software/ui/src/video_common.h",
+      "sha256": "c8ca88a3346b35aae91e21e755b5d60166f6fa75e76801432949cd1deaef288b",
+      "bytes": 9256
+    },
+    {
+      "path": "application/software/src/video_crc.c",
+      "origin": "src/software/ui/src/video_crc.c",
+      "sha256": "be58e87f9f79f3277ed8ca030e84542a12a26f9e65a8b8a1c917f9b8ad57537e",
+      "bytes": 2990
+    },
+    {
+      "path": "application/software/src/video_crc.h",
+      "origin": "src/software/ui/src/video_crc.h",
+      "sha256": "de1280cf1abbbb8e43d3843d3a561021d866b11288e2a46642bc72fb0eed1761",
+      "bytes": 177
+    },
+    {
+      "path": "application/software/src/video_credit_receiver.h",
+      "origin": "src/software/ui/src/video_credit_receiver.h",
+      "sha256": "12df70b9ea5e2d1411f27f2c5c17a5e567adfd24f844ec1a9c4bb12133cbfa6f",
+      "bytes": 1870
+    },
+    {
+      "path": "application/software/src/video_credit_sender.h",
+      "origin": "src/software/ui/src/video_credit_sender.h",
+      "sha256": "c3240dff54e73aa2b17026ca42de6df05fcba2eb8e7d7484131dfa7cd81eedf6",
+      "bytes": 653
+    },
+    {
+      "path": "application/software/src/video_ddr.h",
+      "origin": "src/software/ui/src/video_ddr.h",
+      "sha256": "9607f93eedeb82d5704332c240084ff93a123f075d5bbb178264870712fa8986",
+      "bytes": 5424
+    },
+    {
+      "path": "application/software/src/video_display.h",
+      "origin": "src/software/ui/src/video_display.h",
+      "sha256": "522b5144693cb3dfad8c407dde0943de3586d8314e2957c1f17957c507c48169",
+      "bytes": 10715
+    },
+    {
+      "path": "application/software/src/video_gpu.c",
+      "origin": "src/software/ui/src/video_gpu.c",
+      "sha256": "817d1fce4088b656cf9514e7b44e7edd31f2f42299b3299a9338c0abf1e691c0",
+      "bytes": 16242
+    },
+    {
+      "path": "application/software/src/video_gpu_labels.h",
+      "origin": "src/software/ui/src/video_gpu_labels.h",
+      "sha256": "1a91881c68ba0e7388ab80459f21c00b65a96c14fe2a46e6378c731753c0f0ed",
+      "bytes": 5240
+    },
+    {
+      "path": "application/software/src/video_host_direct.h",
+      "origin": "src/software/ui/src/video_host_direct.h",
+      "sha256": "594e6824d879b9ad5b9d46852ef1aa718ce7fd1ce51b23547da6897f060a1fdc",
+      "bytes": 2019
+    },
+    {
+      "path": "application/software/src/video_integrity.h",
+      "origin": "src/software/ui/src/video_integrity.h",
+      "sha256": "3f9f65acaaee805c2a3ab3cca2a5afa2af22847a79638b2b636a76facb77a5e0",
+      "bytes": 551
+    },
+    {
+      "path": "application/software/src/video_jpeg.c",
+      "origin": "src/software/ui/src/video_jpeg.c",
+      "sha256": "0e703c462801625f275ebb970e1f9a3f229a88d3c369f021200242544e59c398",
+      "bytes": 2975
+    },
+    {
+      "path": "application/software/src/video_label_atlas.h",
+      "origin": "src/software/ui/src/video_label_atlas.h",
+      "sha256": "2115aa21e977d5948665c39bac5cd3794f3f96c1f950029137e95deafaf3a9f1",
+      "bytes": 240433
+    },
+    {
+      "path": "application/software/src/video_label_format.h",
+      "origin": "src/software/ui/src/video_label_format.h",
+      "sha256": "5d20e70199c1f6ecc05fcf303cb7a1c5916a359f7fc1776bf40c306629e261e1",
+      "bytes": 584
+    },
+    {
+      "path": "application/software/src/video_label_names.h",
+      "origin": "src/software/ui/src/video_label_names.h",
+      "sha256": "55997430890904c1ca88799760d7e02a4f3abf3e4404c36641611ea83b4f9397",
+      "bytes": 2326
+    },
+    {
+      "path": "application/software/src/video_notify.h",
+      "origin": "src/software/ui/src/video_notify.h",
+      "sha256": "3a94b29d55809288a1eb0ff345272a634a0b52d2b566c19e9db50e5fb7904b19",
+      "bytes": 1335
+    },
+    {
+      "path": "application/software/src/video_pattern_source.c",
+      "origin": "src/software/ui/src/video_pattern_source.c",
+      "sha256": "6e22bd7d57b2b076619db46f738e08ebbe9d70370fb2c96ac8ed455fcd46bbb3",
+      "bytes": 9186
+    },
+    {
+      "path": "application/software/src/video_session_wait.h",
+      "origin": "src/software/ui/src/video_session_wait.h",
+      "sha256": "154bd001e7c4d1b5fab7e8405fa3cc5ca4689624bfc1951862e2cb5a42d0a43a",
+      "bytes": 2926
+    },
+    {
+      "path": "application/software/src/video_source_park.h",
+      "origin": "src/software/ui/src/video_source_park.h",
+      "sha256": "6f3577895578a6fcbf6c804acc2cd11f4f235b82a4a4c59ff577283afb1538b6",
+      "bytes": 578
+    },
+    {
+      "path": "application/software/video_analysis.py",
+      "origin": "src/software/ui/video_analysis.py",
+      "sha256": "52a20bc5c5f68589bc7bf12d2ef90c39f599688885d67bcb24e84b97e6c2b952",
+      "bytes": 759
+    },
+    {
+      "path": "application/software/video_boxes.py",
+      "origin": "src/software/ui/video_boxes.py",
+      "sha256": "3e3c7d3e629030aa3d0a32bc97bb5a860e172b793ac347fb7c91f8357cef85ed",
+      "bytes": 2518
+    },
+    {
+      "path": "application/software/video_camera.py",
+      "origin": "src/software/ui/video_camera.py",
+      "sha256": "1b16a55d8a854f79baad41eba41693be2991812ad4c82fb548a275a120e240e6",
+      "bytes": 2922
+    },
+    {
+      "path": "application/software/video_capture_build.py",
+      "origin": "src/software/ui/video_capture_build.py",
+      "sha256": "a385b053d898eb185b2290fe8e495eeac7467ceb9ce835110962aad37302820a",
+      "bytes": 1445
+    },
+    {
+      "path": "application/software/video_capture_files.py",
+      "origin": "src/software/ui/video_capture_files.py",
+      "sha256": "f205fbe9d7f48d624bf8f2458d7f3749bb634b85a08011865943ff2a0e71e014",
+      "bytes": 1559
+    },
+    {
+      "path": "application/software/video_checkmarks.py",
+      "origin": "src/software/ui/video_checkmarks.py",
+      "sha256": "bd8047198441a786c8261371e97b67bc56ad9a984ed5dbb2e6da2ea85189782b",
+      "bytes": 1967
+    },
+    {
+      "path": "application/software/video_config.py",
+      "origin": "src/software/ui/video_config.py",
+      "sha256": "9a6f9816bcb7b9a462cb5c6a96fb5fbe9d67ba05d5065aaf6993ca4ece2cf024",
+      "bytes": 5926
+    },
+    {
+      "path": "application/software/video_console.py",
+      "origin": "src/software/ui/video_console.py",
+      "sha256": "8bf26ff3298246e2eb18be7b05f655a5d22bad5f1cb49cb8617983511dbedcb6",
+      "bytes": 23921
+    },
+    {
+      "path": "application/software/video_control.py",
+      "origin": "src/software/ui/video_control.py",
+      "sha256": "635885517047eb98006955b9cf437b30260251e5be9a5dba4c3d8b8510efedd9",
+      "bytes": 29503
+    },
+    {
+      "path": "application/software/video_desktop.py",
+      "origin": "src/software/ui/video_desktop.py",
+      "sha256": "72fa018a86bdb4ae190c4e7d28a4a948d46a3f9e7007eab2136b042453de490e",
+      "bytes": 106386
+    },
+    {
+      "path": "application/software/video_display_memory.py",
+      "origin": "src/software/ui/video_display_memory.py",
+      "sha256": "dcc634744a2753ca8e17856f4ebc745e0d7dde64e1df8e83b52efc61954aa8e5",
+      "bytes": 1887
+    },
+    {
+      "path": "application/software/video_drain.py",
+      "origin": "src/software/ui/video_drain.py",
+      "sha256": "4648c801620a64370e13b0d18fe3320aec1b97b7bece0fc7d115adc5f497093d",
+      "bytes": 8198
+    },
+    {
+      "path": "application/software/video_errors.py",
+      "origin": "src/software/ui/video_errors.py",
+      "sha256": "9cca3fa9227f5aa956f718956a06b4771f070a56066168921d9fe454a0d5a997",
+      "bytes": 2880
+    },
+    {
+      "path": "application/software/video_gpu.py",
+      "origin": "src/software/ui/video_gpu.py",
+      "sha256": "d96bbaaf85d5cb2fcab72b358859fad8d866ee350555d89a2a10b2251390d5d9",
+      "bytes": 2401
+    },
+    {
+      "path": "application/software/video_isp.py",
+      "origin": "src/software/ui/video_isp.py",
+      "sha256": "107ba817e9fe82007637b0a59d36f7108ff5cf3761d0af550a096c007b7b7c82",
+      "bytes": 1393
+    },
+    {
+      "path": "application/software/video_labels.py",
+      "origin": "src/software/ui/video_labels.py",
+      "sha256": "ec3bef43375d23aa8b30d3c8b17d1e6281cae4c1193c6692c035454e4c71ad40",
+      "bytes": 516
+    },
+    {
+      "path": "application/software/video_live_isp.py",
+      "origin": "src/software/ui/video_live_isp.py",
+      "sha256": "00dab53f62f433f17d83c1723b17ec66e7296782ec4e5942f2ab760d53520110",
+      "bytes": 2980
+    },
+    {
+      "path": "application/software/video_panels.py",
+      "origin": "src/software/ui/video_panels.py",
+      "sha256": "e05b873178cb331be3015c89a62e8a1ff4a308fba65b58ab2d2180e71be3f3de",
+      "bytes": 7734
+    },
+    {
+      "path": "application/software/video_pixels.py",
+      "origin": "src/software/ui/video_pixels.py",
+      "sha256": "294596d5a6a24cd06e184f49c59e649a8fd25ee09ecd869e21a2fff5553b2372",
+      "bytes": 1012
+    },
+    {
+      "path": "application/software/video_preprocess.py",
+      "origin": "src/software/ui/video_preprocess.py",
+      "sha256": "ed63aa302d8e159672e603482ba1a092c5aedf64ebf56c4783b923b439572d2b",
+      "bytes": 4290
+    },
+    {
+      "path": "application/software/video_responsive.py",
+      "origin": "src/software/ui/video_responsive.py",
+      "sha256": "b4ee3a1278643dab006bad5f264571eeb39333e342aa3bd5c3ac856e692a2fd2",
+      "bytes": 3519
+    },
+    {
+      "path": "application/software/video_snapshot.py",
+      "origin": "src/software/ui/video_snapshot.py",
+      "sha256": "980c753d1d25cb5ea9e440e89f7009047d3c3b18c44753486b9962f382a0395f",
+      "bytes": 6655
+    },
+    {
+      "path": "application/software/video_stages.py",
+      "origin": "src/software/ui/video_stages.py",
+      "sha256": "470607eeaaef856909f0875046f09a137505aad76b1df383e5f024c4f9f24a59",
+      "bytes": 11604
+    },
+    {
+      "path": "application/software/video_viewer.py",
+      "origin": "src/software/ui/video_viewer.py",
+      "sha256": "886ba8b1d814b568ef1f0a4db59db5a4b836aa2120ecf4beb09f1a2a3c976e24",
+      "bytes": 5178
+    },
+    {
+      "path": "application/software/video_web.py",
+      "origin": "src/software/ui/video_web.py",
+      "sha256": "7a08f8d98c385c9769ce14c520d7b77a1593ce4c3de1495a25cd5426fa78e8b8",
+      "bytes": 16169
+    },
+    {
+      "path": "application/software/video_yolo_deploy.py",
+      "origin": "src/software/ui/video_yolo_deploy.py",
+      "sha256": "d2702ca753567f606aa76d5a662a57eacf90b57209321cff0affcee4c88f8f1a",
+      "bytes": 3181
+    },
+    {
+      "path": "application/software/video_yolo_state.py",
+      "origin": "src/software/ui/video_yolo_state.py",
+      "sha256": "b39061a7a13506ee951dd6d7ce43369a3bb1c6dd1a7e48e81e0f8d06c6adeb74",
+      "bytes": 892
+    },
+    {
+      "path": "application/software/video_yolo_worker.py",
+      "origin": "src/software/ui/video_yolo_worker.py",
+      "sha256": "6e43e084e222903a9be4e85ad240f31f40e6289e30004da51b85f9198c52377c",
+      "bytes": 306
+    }
+  ],
+  "path_policy": "package-relative"
+}

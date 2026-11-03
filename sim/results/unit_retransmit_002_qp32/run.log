@@ -1,0 +1,7 @@
+VCD info: dumpfile retransmit.vcd opened for output.
+CASE_PASS case=1 psn=000101 completed_bytes=0 entries=0 stall=0
+CASE_PASS case=2 psn=000108 completed_bytes=4096 entries=2 stall=0
+CASE_PASS case=3 psn=000201 completed_bytes=8192 entries=2 stall=1
+CASE_PASS case=4 psn=fffffe completed_bytes=0 entries=0 stall=1
+UNIT_PASS cases=4 scope=retransmit_controller_only
+/home/wnagds/Public/嵌赛/工程复现_20261029/sim/tb_retransmit_ctrl.sv:181: $finish called at 440000 (1ps)

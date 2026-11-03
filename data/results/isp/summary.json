@@ -1,0 +1,52 @@
+{
+  "provenance": "reconstructed_from_technical_paper_table_7_figures_42_43",
+  "status": "PAPER_RECONSTRUCTED_RESULT",
+  "resolution": "2400x2048",
+  "configured_fps": 140,
+  "mask_sequence": [
+    15,
+    0,
+    15,
+    0,
+    15
+  ],
+  "segment_frames": [
+    1409,
+    1409,
+    1547,
+    1405,
+    1266
+  ],
+  "segment_fps": [
+    139.34,
+    139.93,
+    139.93,
+    139.64,
+    139.87
+  ],
+  "crc_errors": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "busy": [
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "error": [
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "segment_frames_total": 7036,
+  "inter_window_frames": 282,
+  "whole_run_frames": 7318,
+  "notes": "五个观测窗口合计7036帧，窗口间补计282帧，与相机双路径全过程增量7318帧闭合。"
+}

@@ -1,0 +1,15 @@
+{
+  "scope": "isolated software candidate; frozen production input unchanged; video direct-DDR and independent box frame credits now match receiver RDMA writes; session END still uses TCP; checked source EOF drains peer credits; disable and retire QPs before pool release",
+  "files": [
+    {
+      "name": "ernic_video_sender.c",
+      "before_sha256": "8593de27c6b3b145b52ddf06d08762ccbebf109fa65d99b848ced6dd09818c37",
+      "after_sha256": "53e0f41e078a81d97959e750c0b62982441fdc790e5cece11b8bced7ae5c9193"
+    },
+    {
+      "name": "video_box_sender.h",
+      "before_sha256": "00e68af54078557e315e3c3631f793fa481fbd26e08f4ac37f491bbca0c678dc",
+      "after_sha256": "1f0da28d5baa2a16f43067d27ce09559345e096220a08186d4e68c46100511d0"
+    }
+  ]
+}

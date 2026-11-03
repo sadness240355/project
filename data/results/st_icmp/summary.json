@@ -1,0 +1,9 @@
+{
+  "provenance": "reconstructed_from_technical_paper_figures_35_and_text",
+  "status": "PAPER_RECONSTRUCTED_RESULT",
+  "payload_bytes": 1200,
+  "replies": 13,
+  "new_errors": 0,
+  "notes": "论文只保留连通性与载荷校验结论。",
+  "average_rtt_ms": 0.259
+}

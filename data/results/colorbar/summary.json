@@ -1,0 +1,22 @@
+{
+  "provenance": "reconstructed_from_technical_paper_table_8_and_section_3_3_6",
+  "status": "PAPER_RECONSTRUCTED_RESULT",
+  "sampling_points": "data/results/colorbar/sampling_points.csv",
+  "frame_bytes": 14745600,
+  "frame_format": "2400x2048 RGB888",
+  "window_seconds": 60,
+  "reported_rounds": 2,
+  "dma": {
+    "MiB_s": 6642.075,
+    "Gbit_s": 55.718,
+    "CRC_errors": 0
+  },
+  "rdma": {
+    "MiB_s": 10990.549,
+    "Gbit_s": 92.195,
+    "physical_rx_Gbit_s": 94.64,
+    "physical_drops_increased": false,
+    "CRC_errors": 0
+  },
+  "notes": "论文表8只报告两轮复测的汇总值，未给出逐轮数值，因此不拆写未经报告的单轮完成计数。DMA与RDMA为独立运行，带宽不可相加为并发吞吐。"
+}
